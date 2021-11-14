@@ -16,7 +16,7 @@ def build_model():
     model = torchvision.models.resnet50()
     num_ftrs = model.fc.in_features
     model.fc = nn.Linear(num_ftrs, 2)
-    m_state_dict = torch.load('models/hayate_finetune.pt')
+    m_state_dict = torch.load('models/hayate_finetune.pt', map_location=DEVICE)
     model.load_state_dict(m_state_dict)
     model.to(DEVICE)
     model.eval()
