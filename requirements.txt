@@ -1,0 +1,3 @@
+Pillow
+torch==1.10.0+cu102
+torchvision==0.11.1+cu102
