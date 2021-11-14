@@ -91,7 +91,7 @@ class Vision(Body):
             with col2:
                 option = st.selectbox(
                     '入力形式', 
-                    ('file', 'URL')
+                    ('URL', 'file')
                 )
             with col1:
                 if option == 'file':
@@ -101,11 +101,11 @@ class Vision(Body):
                 else:
                     self.input_data = st.text_area(
                         '画像のURLを入力してください',
-                        'https://cloud.google.com/vision/docs/images/bicycle_original.jpeg'
+                        'https://imas.gamedbs.jp/cgss/images/F5uD5HHnT0IeMsl0dohw1SSMRZhyiaMqkwB7YcGB0Vc.jpg?1447915675'
                     )
         return None
 
-    # def setting_area(self) -> None:
+    def setting_area(self) -> None:
         # with self.setting_container:
         #     st.subheader('実行設定')
         #     col1, col2, col3 = st.columns(3)
@@ -121,7 +121,7 @@ class Vision(Body):
         #         )
         #     with col3:
         #         self.setting['font_size'] = st.slider('font size', 5, 20, 12)
-        # return None
+        return None
 
     def running_area(self) -> None:
         if self.input_data is None:
